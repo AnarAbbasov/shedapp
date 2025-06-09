@@ -1,0 +1,12 @@
+---
+
+- name: Check System
+  include_tasks: check.yaml
+- name: update packages
+  include_tasks: update.yml
+- name: install docker
+  include_tasks: docker.yml
+
+
+      
+      

@@ -1,0 +1,15 @@
+- name: attempt upgrade
+  block:
+   
+    - name: update packages
+      yum:  
+        name: "*"
+        state: latest
+        update_cache: yes
+  rescue:
+    - name: display unsuccesful
+      debug: 
+        msg: unsuccesful update
+  always:
+    - debug: 
+        msg: cleaning up

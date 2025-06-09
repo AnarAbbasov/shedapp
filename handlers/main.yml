@@ -1,0 +1,22 @@
+---
+- name: list_files
+  command: 'ls'
+- name: test
+  debug:
+    msg: "handler was triggered"
+- name: watchdog
+  debug:
+    msg: "watchdog triggered"
+  listen: config_updated
+- name: watchdog2
+  debug:
+    msg: "watchdog2 triggered"
+  listen: config_updated
+- name: loop_files
+  debug:
+   msg: "{{item}}"
+  loop:
+    - one
+    - two
+    - three
+  listen: config_updated

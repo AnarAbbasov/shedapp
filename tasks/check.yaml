@@ -1,0 +1,17 @@
+---
+
+- name: check
+  ping:
+- name: sucess message
+  debug:
+    msg: "Host is alive deployment can start..."
+  
+
+  
+  
+
+
+
+
+  
+ 
