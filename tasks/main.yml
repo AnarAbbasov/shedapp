@@ -6,6 +6,10 @@
   include_tasks: update.yml
 - name: install docker
   include_tasks: docker.yml
+- name: open ports
+  include_tasks: firewall.yml
+- name: copy files
+  include_tasks: copy_files.yml
 
 
       

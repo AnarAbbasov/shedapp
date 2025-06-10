@@ -1,0 +1,12 @@
+- name: Copy docker compose file
+  ansible.builtin.copy:
+    src: /home/ansible/shed_app/files/docker-compose.yml
+    dest: /home/ansible/docker-compose.yml
+
+- name: Copy database file
+  ansible.builtin.copy:
+    src: /home/ansible/shed_app/files/db.sqlite3
+    dest: /home/ansible/db.sqlite3
+    
+    
+    
