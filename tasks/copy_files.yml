@@ -3,10 +3,20 @@
     src: /home/ansible/shed_app/files/docker-compose.yml
     dest: /home/ansible/docker-compose.yml
 
+
+
+#/home/ansible/shedproj/db_mount
+
+- name: Ensure directory exists
+  ansible.builtin.file:
+    path: /home/ansible/shedproj/db_mount
+    state: directory
+    mode: '0755'
+
 - name: Copy database file
   ansible.builtin.copy:
     src: /home/ansible/shed_app/files/db.sqlite3
-    dest: /home/ansible/db.sqlite3
+    dest: /home/ansible/shedproj/db_mount/db.sqlite3
     
     
     

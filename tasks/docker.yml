@@ -1,5 +1,20 @@
+- name: Add Docker repository
+  ansible.builtin.yum_repository:
+    name: docker-ce
+    description: Docker CE Repository
+    baseurl: https://download.docker.com/linux/centos/9/docker-ce.repo
+    gpgcheck: no
+    gpgkey: https://download.docker.com/linux/centos/gpg
+    enabled: yes
+
 - name: install docker
   yum:
     name:
     - docker
+    state: present
+
+ 
+- name: Install Docker Compose plugin
+  ansible.builtin.yum:
+    name: docker-compose-plugin
     state: present

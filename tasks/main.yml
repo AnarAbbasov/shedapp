@@ -10,6 +10,8 @@
   include_tasks: firewall.yml
 - name: copy files
   include_tasks: copy_files.yml
+- name: deploy apps
+  include_tasks: deploy.yml
 
 
       

@@ -13,7 +13,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - /home/anar/shedproj/db_mount:/shedproj/db_mount
+      - /home/ansible/shedproj/db_mount:/shedproj/db_mount
   
   
   
