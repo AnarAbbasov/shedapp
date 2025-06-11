@@ -2,7 +2,7 @@
   ansible.builtin.yum_repository:
     name: docker-ce
     description: Docker CE Repository
-    baseurl: https://download.docker.com/linux/centos/9/docker-ce.repo
+    baseurl: https://download.docker.com/linux/rhel/9/x86_64/stable/
     gpgcheck: no
     gpgkey: https://download.docker.com/linux/centos/gpg
     enabled: yes
@@ -10,8 +10,20 @@
 - name: install docker
   yum:
     name:
-    - docker
+      "{{item}}"
     state: present
+  loop:
+  
+  - docker-ce 
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin  
+  - docker-compose-plugin
+    #docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+
+
 
  
 - name: Install Docker Compose plugin
