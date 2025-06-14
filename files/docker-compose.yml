@@ -9,7 +9,7 @@ services:
   
     
   app2:
-    image: anarabbasov/shedproj:test1
+    image: anarabbasov/shedproj:test1.1
     ports:
       - "8000:8000"
     volumes:
