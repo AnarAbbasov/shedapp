@@ -31,3 +31,8 @@
   ansible.builtin.yum:
     name: docker-compose-plugin
     state: present
+
+- name: start docker
+  systemd: 
+    name: docker.service
+    state: started
