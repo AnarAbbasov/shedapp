@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Ansible role to deploy shedproj
+Ansible role to deploy shedproj to vm
 
 Requirements
 ------------
