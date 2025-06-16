@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Ansible role to deploy shedproj to vm machine on rocky
+Ansible role to deploy shedproj to vm machine on rocky linux
 
 Requirements
 ------------
